@@ -1,0 +1,36 @@
+// src/data.js
+export const booksData = [
+    { id: 1, title: 'Le Comte de Monte-Cristo', author: 'Alexandre Dumas', read: false },
+    { id: 2, title: '1984', author: 'George Orwell', read: false },
+    { id: 3, title: 'Le Seigneur des Anneaux', author: 'J.R.R. Tolkien', read: false },
+    { id: 4, title: 'Le Vieil Homme et la Mer', author: 'Ernest Hemingway', read: false },
+    { id: 5, title: 'Le Petit Prince', author: 'Antoine de Saint-Exupéry', read: false },
+    { id: 6, title: 'Le Nom de la Rose', author: 'Umberto Eco', read: false },
+    { id: 7, title: 'Le Parfum', author: 'Patrick Süskind', read: false },
+    { id: 8, title: 'Le Rouge et le Noir', author: 'Stendhal', read: false },
+    { id: 9, title: 'Les Misérables', author: 'Victor Hugo', read: false },
+    { id: 10, title: 'L\'Étranger', author: 'Albert Camus', read: false },
+    { id: 11, title: 'Le Lion', author: 'Joseph Kessel', read: false },
+    { id: 12, title: 'Le Château de ma mère', author: 'Marcel Pagnol', read: false },
+    { id: 13, title: 'Le Petit Nicolas', author: 'René Goscinny', read: false },
+    { id: 14, title: 'Le Tour du monde en 80 jours', author: 'Jules Verne', read: false },
+    { id: 15, title: 'Le Père Goriot', author: 'Honoré de Balzac', read: false },
+    { id: 16, title: 'Le Grand Meaulnes', author: 'Alain-Fournier', read: false },
+    { id: 17, title: 'Le Horla', author: 'Guy de Maupassant', read: false },
+    { id: 18, title: 'Le Dernier Jour d\'un condamné', author: 'Victor Hugo', read: false },
+    { id: 19, title: 'Le Tour du monde en 80 jours', author: 'Jules Verne', read: false },
+    { id: 20, title: 'Le Père Goriot', author: 'Honoré de Balzac', read: false },
+    { id: 21, title: 'Le Grand Meaulnes', author: 'Alain-Fournier', read: false },
+    { id: 22, title: 'Le Horla', author: 'Guy de Maupassant', read: false },
+    { id: 23, title: 'Le Dernier Jour d\'un condamné', author: 'Victor Hugo', read: false },
+    { id: 24, title: 'Le Tour du monde en 80 jours', author: 'Jules Verne', read: false },
+    { id: 25, title: 'Le Père Goriot', author: 'Honoré de Balzac', read: false },
+    { id: 26, title: 'Le Grand Meaulnes', author: 'Alain-Fournier', read: false },
+    { id: 27, title: 'Le Horla', author: 'Guy de Maupassant', read: false },
+    { id: 28, title: 'Le Dernier Jour d\'un condamné', author: 'Victor Hugo', read: false },
+    { id: 29, title: 'Le Tour du monde en 80 jours', author: 'Jules Verne', read: false },
+    { id: 30, title: 'Le Père Goriot', author: 'Honoré de Balzac', read: false },
+    
+    // Ajoutez d'autres livres ici
+  ];
+  
