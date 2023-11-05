@@ -29,9 +29,13 @@ export default {
 
 .content {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Film sombre pour faire ressortir le texte */
-  padding: 20px;
-  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.698); /* Film sombre pour faire ressortir le texte */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 

@@ -44,10 +44,10 @@
             <td>{{ book.author }}</td>
             <td>
       <button
-        :class="['btn', 'btn-sm', book.read ? 'btn-success' : 'btn-outline-primary']"
+        :class="['btn', 'btn-statut', 'btn-sm', book.read ? 'btn-outline-success' : 'btn-outline-warning']"
         @click="toggleReadStatus(book)"
       >
-        {{ book.read ? 'Lu 👍' : 'À lire 👀' }}
+        {{ book.read ? 'Lu 📗' : 'À lire 📙' }}
       </button>
     </td>
             <td>
@@ -109,12 +109,16 @@
       font-family: 'Vujahday Script', cursive;
       font-size: 3em;
     }
+
+    .btn-statut {
+      width: 80px;
+    }
+
+    .btn {
+      border-radius: 25px;
+    }
   
-    .btn-success:hover {
-    color: #fff; /* Texte blanc */
-    background-color: #28a745; /* Couleur de fond verte */
-    border-color: #28a745; /* Couleur de bordure verte */
-  }
+
 </style>
 
   
