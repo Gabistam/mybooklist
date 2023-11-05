@@ -24,6 +24,10 @@
   </script>
   
   <style>
-  /* Ajoutez ici vos styles personnalisés pour le header si nécessaire */
+    
+    .navbar-brand {
+      font-family: 'Vujahday Script', cursive;
+      font-size: 2em;
+    }
   </style>
   

@@ -1,6 +1,6 @@
 <template>
     <div class="container py-5">
-      <h1 class="text-center mb-4">MyBookLister 📚</h1>
+      <h1 class="text-center mb-4 title-font">MyBookLister 📚</h1>
       
       <!-- Carte de statistiques -->
     <div class="card text-center my-5">
@@ -103,6 +103,13 @@
   </script>
   
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Fira+Code:wght@500&family=Fragment+Mono:ital@1&family=Inter:wght@600&family=Vujahday+Script&display=swap');
+
+    .title-font {
+      font-family: 'Vujahday Script', cursive;
+      font-size: 3em;
+    }
+  
     .btn-success:hover {
     color: #fff; /* Texte blanc */
     background-color: #28a745; /* Couleur de fond verte */

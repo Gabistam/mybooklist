@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <div class="content">
-      <h1>Bienvenue sur MyBookLister</h1>
+      <h1 class="title-font mb-5">Bienvenue sur MyBookLister</h1>
       <p class="tagline">Votre espace personnel pour suivre et gérer vos lectures.</p>
     </div>
   </div>
@@ -14,6 +14,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Fira+Code:wght@500&family=Fragment+Mono:ital@1&family=Inter:wght@600&family=Vujahday+Script&display=swap');
+
 .home-container {
   background: url('../assets/bibli1.webp') no-repeat center center;
   background-size: cover;
@@ -32,14 +34,15 @@ export default {
   border-radius: 8px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
+
+    .title-font {
+      font-family: 'Vujahday Script', cursive;
+      font-size: 5em;
+    }
 
 .tagline {
-  font-size: 1.2em;
-  margin-top: 0.5em;
+  font-size: 1.5em;
+  margin-top: 1em;
 }
 
 /* Ajoutez une variable pour la hauteur du footer dans vos styles globaux */
