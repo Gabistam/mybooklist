@@ -1,9 +1,9 @@
 <template>
-    <div class="container mt-5">
-      <h1 class="text-center mb-4">Ma Bibliothèque 📚</h1>
+    <div class="container py-5">
+      <h1 class="text-center mb-4">MyBookLister 📚</h1>
       
       <!-- Carte de statistiques -->
-    <div class="card text-center mb-4">
+    <div class="card text-center my-5">
       <div class="card-header">
         Statistiques de Lecture
       </div>
@@ -19,7 +19,17 @@
         </div>
       </div>
     </div>
-      <table class="table table-hover">
+
+        <!-- Formulaire d'ajout de livre -->
+        <!-- Bouton pour afficher le formulaire d'ajout de livre -->
+    <button class="btn btn-success my-5" @click="showAddBookForm = true">Ajouter un livre</button>
+    <!-- Formulaire d'ajout de livre -->
+    <add-book-form v-if="showAddBookForm" @add-book="addNewBook"></add-book-form>
+   
+    <!-- Tableau de livres -->
+
+    <div class="table-responsive px-5">
+      <table class="table table-hover table-background">
         <thead>
           <tr>
             <th>Titre</th>
@@ -33,10 +43,13 @@
             <td>{{ book.title }}</td>
             <td>{{ book.author }}</td>
             <td>
-              <button class="btn btn-outline-primary btn-sm" @click="toggleReadStatus(book)">
-                {{ book.read ? 'Lu 👍' : 'À lire 👀' }}
-              </button>
-            </td>
+      <button
+        :class="['btn', 'btn-sm', book.read ? 'btn-success' : 'btn-outline-primary']"
+        @click="toggleReadStatus(book)"
+      >
+        {{ book.read ? 'Lu 👍' : 'À lire 👀' }}
+      </button>
+    </td>
             <td>
               <button class="btn btn-outline-danger btn-sm" @click="deleteBook(book)">
                 Supprimer 🗑️
@@ -46,15 +59,21 @@
         </tbody>
       </table>
     </div>
+    </div>
   </template>
   
   <script>
-  import { booksData } from '../data/data.js'; // Assurez-vous que le chemin est correct
+  import { booksData } from '../data/data.js'; // Importez les données de livres
+  import AddBookForm from './AddBookForm.vue';
   
   export default {
+    components: {
+    AddBookForm
+  },
     data() {
       return {
-        books: booksData
+        books: booksData,
+        showAddBookForm: false // Contrôle l'affichage du formulaire d'ajout de livre
       };
     },
     computed: {
@@ -74,15 +93,21 @@
       deleteBook(bookToDelete) {
         this.books = this.books.filter(book => book.id !== bookToDelete.id);
         // Mettre à jour le localStorage ou votre backend ici
-      }
+      },
+      addNewBook(newBook) {
+      this.books.push(newBook);
+      this.showAddBookForm = false; // Cache le formulaire après l'ajout
+    },
     }
   };
   </script>
   
   <style>
-  /* Votre CSS personnalisé en plus de Bootstrap */
-  .table {
-    /* Ajoutez ici des styles pour personnaliser votre tableau */
+    .btn-success:hover {
+    color: #fff; /* Texte blanc */
+    background-color: #28a745; /* Couleur de fond verte */
+    border-color: #28a745; /* Couleur de bordure verte */
   }
-  </style>
+</style>
+
   
